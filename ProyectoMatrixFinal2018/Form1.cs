@@ -15,6 +15,10 @@ namespace ProyectoMatrixFinal2018
         public Form1()
         {
             InitializeComponent();
+            pbFondo.ImageLocation = "C:\\visual studio 2015\\Projects\\ProyectoMatrixFinal2018\\fondo.gif";
+
         }
+
+        
     }
 }
