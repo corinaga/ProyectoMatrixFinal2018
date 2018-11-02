@@ -428,5 +428,11 @@ namespace ProyectoMatrixFinal2018.Matrix
             return finish;
         }
 
+        public Personage[,] getBoard()
+        {
+            return this.board;
+        }
     }
+
+    
 }

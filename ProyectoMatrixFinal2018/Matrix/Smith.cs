@@ -9,7 +9,7 @@ namespace ProyectoMatrixFinal2018.Matrix
 {
     class Smith : Personage
     {
-        private Image imgSmith = Image.FromFile("..\\..\\imgPersonage\\neo.png");
+        private Image imgSmith = Image.FromFile("..\\..\\imgPersonage\\smith.png");
         public int infect;
         private readonly int MAX = 8;
 
