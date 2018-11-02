@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,17 +9,24 @@ namespace ProyectoMatrixFinal2018.Matrix
 {
     class Smith : Personage
     {
-
+        private Image imgSmith = Image.FromFile("..\\..\\imgPersonage\\neo.png");
         public int infect;
         private readonly int MAX = 8;
 
         public Smith()
         {
             this.infect = getInfect();
+            this.image = imageResize();
 
 
         }
-
+        private Image imageResize()
+        {
+            int height = 130;
+            int weight = 130;
+            Bitmap bm = new Bitmap(this.imgSmith, height, weight);
+            return (Image)bm;
+        }
 
         public int getInfect()
         {
