@@ -19,16 +19,8 @@ namespace ProyectoMatrixFinal2018
             principal = new Principal();
 
             InitializeComponent();
-            pbFondo.ImageLocation = "C:\\visual studio 2015\\Projects\\ProyectoMatrixFinal2018\\fondo.gif";
-            //Shown += new EventHandler(Inicial_Shown);
-
-            //// To report progress from the background worker we need to set this property
-            //backgroundWorker1.WorkerReportsProgress = true;
-            //// This event will be raised on the worker thread when the worker starts
-            //backgroundWorker1.DoWork += new DoWorkEventHandler(backgroundWorker1_DoWork);
-            //// This event will be raised when we call ReportProgress
-            //backgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
-
+            pbFondo.ImageLocation = "..\\..\\principal\\fondo.gif";
+            
 
 
         }

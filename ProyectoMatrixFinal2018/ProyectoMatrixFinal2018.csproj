@@ -129,6 +129,9 @@
     <Content Include="imgPersonage\muerto.jpg" />
     <Content Include="imgPersonage\neo.png" />
     <Content Include="imgPersonage\smith.png" />
+    <Content Include="principal\fondo.gif" />
+    <Content Include="principal\fondoFormulario.jpg" />
+    <Content Include="principal\musica.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
