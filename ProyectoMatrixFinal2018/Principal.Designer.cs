@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.txtArea = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // progressBar1
@@ -45,27 +43,15 @@
             this.progressBar1.Size = new System.Drawing.Size(492, 53);
             this.progressBar1.TabIndex = 0;
             // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(910, 476);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(99, 32);
-            this.btnStart.TabIndex = 1;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            // 
             // txtArea
             // 
             this.txtArea.BackColor = System.Drawing.SystemColors.MenuText;
+            this.txtArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArea.ForeColor = System.Drawing.Color.Lime;
             this.txtArea.Location = new System.Drawing.Point(48, 47);
             this.txtArea.Multiline = true;
             this.txtArea.Name = "txtArea";
+            this.txtArea.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtArea.Size = new System.Drawing.Size(411, 461);
             this.txtArea.TabIndex = 2;
             // 
@@ -85,7 +71,6 @@
             this.ClientSize = new System.Drawing.Size(1299, 579);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtArea);
-            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.progressBar1);
             this.Name = "Principal";
             this.Text = "Principal";
@@ -100,9 +85,8 @@
         #endregion
 
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox txtArea;
         private System.Windows.Forms.Label label1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

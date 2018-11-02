@@ -16,6 +16,72 @@ namespace ProyectoMatrixFinal2018
         {
             
             InitializeComponent();
+            Shown += new EventHandler(Principal_Shown);
+
+            // To report progress from the background worker we need to set this property
+            backgroundWorker1.WorkerReportsProgress = true;
+            // This event will be raised on the worker thread when the worker starts
+            backgroundWorker1.DoWork += new DoWorkEventHandler(backgroundWorker1_DoWork);
+            // This event will be raised when we call ReportProgress
+            backgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
+
+        }
+
+        void Principal_Shown(object sender, EventArgs e)
+        {
+            // Start the background worker
+            backgroundWorker1.RunWorkerAsync();
+            
+        }
+        // On worker thread so do our thing!
+
+
+        void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+            int max_time = 20;
+            int time = 1;
+
+            Matrix.Matrix m = new Matrix.Matrix();
+
+           
+            do
+            {
+                if (time % 1 == 0 && !m.end())
+                {
+                    //Accion del personaje
+                    m.actionPg();
+
+
+                }
+                if (time % 2 == 0 && !m.end())
+                {
+                    //Accion de smith
+                    m.smithAction2();
+
+                }
+                if (time % 5 == 0 && !m.end())
+                 {
+                    //Accion de neo
+                    m.actionNeo();
+
+                 }
+                    backgroundWorker1.ReportProgress(time);
+                System.Threading.Thread.Sleep(1000);
+                time += 1;
+                
+                //nuevo.label1.Text = (progressBar1.Value.ToString() + "%");
+
+            } while (time <= max_time && !m.end());
+
+        }
+        // Back on the 'UI' thread so we can update the progress bar
+        void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            // The progress percentage is a property of e
+            progressBar1.Value = e.ProgressPercentage;
+            txtArea.Text += e.ProgressPercentage + String.Format(Environment.NewLine);
+            // Aqui actualizamos el datagridview con los datos, osea el m.print que haciamos por consola
 
         }
 
@@ -24,50 +90,6 @@ namespace ProyectoMatrixFinal2018
             Application.Exit();
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            this.progressBar1.Value = 0;
-            this.progressBar1.Maximum = 20;
-            timer1.Interval = 1000;
-            timer1.Start();
-            label1.Text = (progressBar1.Value.ToString() + "%");
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-
-        {
-            if (this.progressBar1.Value != 20)
-            {
-                //cada "tick" que es 1s la barra aumenta 1 
-                this.progressBar1.Value += 1;
-                //Lo multiplico por 5 para que llegue al 100% ya que el maximo valor de la barra es 20
-                int progress = progressBar1.Value * 5;
-                label1.Text = (progress.ToString() + "%");
-            }
-            else
-            {
-                timer1.Stop();
-                this.Close();
-            }
-            //como su valor aumenta 1 cada segundo 
-            if (this.progressBar1.Value % 2 == 0)
-            {
-                txtArea.Text = "Smith action";
-
-            }
-            if (this.progressBar1.Value % 5 == 0)
-            {
-                txtArea.Text = "Neo action";
-
-
-            }
-
-
-
-
-
-
-
-        }
+        
     }
 }
