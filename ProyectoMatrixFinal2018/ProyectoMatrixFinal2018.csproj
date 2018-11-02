@@ -116,6 +116,20 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="imgPersonage\chica1.png" />
+    <Content Include="imgPersonage\chica2.png" />
+    <Content Include="imgPersonage\chica3.png" />
+    <Content Include="imgPersonage\chica4.png" />
+    <Content Include="imgPersonage\chico1.png" />
+    <Content Include="imgPersonage\chico2.png" />
+    <Content Include="imgPersonage\chico3.png" />
+    <Content Include="imgPersonage\chico4.png" />
+    <Content Include="imgPersonage\muerto.jpg" />
+    <Content Include="imgPersonage\neo.png" />
+    <Content Include="imgPersonage\smith.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
