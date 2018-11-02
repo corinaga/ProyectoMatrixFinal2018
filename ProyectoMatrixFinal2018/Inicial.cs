@@ -10,15 +10,29 @@ using System.Windows.Forms;
 
 namespace ProyectoMatrixFinal2018
 {
-    public partial class Form1 : Form
+    public partial class Inicial : Form
     {
-        public Form1()
+
+        private Principal principal;
+        public Inicial()
         {
+            principal = new Principal();
+
             InitializeComponent();
             pbFondo.ImageLocation = "C:\\visual studio 2015\\Projects\\ProyectoMatrixFinal2018\\fondo.gif";
 
+
+
         }
 
-        
+        private void pbFondo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            principal.Show();
+        }
     }
 }

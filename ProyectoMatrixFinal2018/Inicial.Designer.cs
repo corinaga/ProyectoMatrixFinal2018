@@ -1,6 +1,6 @@
 ﻿namespace ProyectoMatrixFinal2018
 {
-    partial class Form1
+    partial class Inicial
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicial));
             this.pbFondo = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
@@ -44,6 +44,7 @@
             this.pbFondo.Size = new System.Drawing.Size(690, 369);
             this.pbFondo.TabIndex = 0;
             this.pbFondo.TabStop = false;
+            this.pbFondo.Click += new System.EventHandler(this.pbFondo_Click);
             // 
             // button1
             // 
@@ -56,6 +57,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Connect";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // axWindowsMediaPlayer1
             // 
@@ -67,7 +69,7 @@
             this.axWindowsMediaPlayer1.TabIndex = 2;
             this.axWindowsMediaPlayer1.Visible = false;
             // 
-            // Form1
+            // Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -78,7 +80,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Inicial";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pbFondo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
