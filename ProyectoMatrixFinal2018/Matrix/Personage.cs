@@ -18,7 +18,7 @@ namespace ProyectoMatrixFinal2018.Matrix
                 Image.FromFile("..\\..\\imgPersonage\\chico1.png"),
                 Image.FromFile("..\\..\\imgPersonage\\chico2.png"),
                 Image.FromFile("..\\..\\imgPersonage\\chica2.png"),
-                Image.FromFile("..\\..\\imgPersonages\\chica3.png"),
+                Image.FromFile("..\\..\\imgPersonage\\chica3.png"),
                 Image.FromFile("..\\..\\imgPersonage\\chica4.png"),
                 Image.FromFile("..\\..\\imgPersonage\\chico3.png"),
                 Image.FromFile("..\\..\\imgPersonage\\chico4.png")
