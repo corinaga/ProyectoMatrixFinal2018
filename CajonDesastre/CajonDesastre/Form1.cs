@@ -27,7 +27,7 @@ namespace CajonDesastre
             }
 
             
-            Bitmap bm = new Bitmap(Image.FromFile("C:\\Users\\Fj Margotón\\Documents\\Visual Studio 2015\\Projects\\CajonDesastre\\CajonDesastre\\muerto.jpg"),130,130);
+            Bitmap bm = new Bitmap(Image.FromFile("..\\..\\muerto.jpg"),130,130);
             this.dead = (Image)bm;
 
             InitializeComponent();

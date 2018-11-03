@@ -13,11 +13,11 @@ namespace CajonDesastre
         private String nombre;
         private Image imagen;
         private Image[] imagenes = {
-                Image.FromFile("C:\\Users\\Fj Margotón\\Documents\\Visual Studio 2015\\Projects\\CajonDesastre\\CajonDesastre\\trinity.png"),
-                Image.FromFile("C:\\Users\\Fj Margotón\\Documents\\Visual Studio 2015\\Projects\\CajonDesastre\\CajonDesastre\\neo.png"),
-                Image.FromFile("C:\\Users\\Fj Margotón\\Documents\\Visual Studio 2015\\Projects\\CajonDesastre\\CajonDesastre\\smith.png"),
-                Image.FromFile("C:\\Users\\Fj Margotón\\Documents\\Visual Studio 2015\\Projects\\CajonDesastre\\CajonDesastre\\juan.png"),
-                Image.FromFile("C:\\Users\\Fj Margotón\\Documents\\Visual Studio 2015\\Projects\\CajonDesastre\\CajonDesastre\\conor.png")
+                Image.FromFile("..\\..\\trinity.png"),
+                Image.FromFile("..\\..\\neo.png"),
+                Image.FromFile("..\\..\\smith.png"),
+                Image.FromFile("..\\..\\juan.png"),
+                Image.FromFile("..\\..\\conor.png")
         };
 
 

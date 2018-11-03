@@ -66,14 +66,16 @@ namespace ProyectoMatrixFinal2018
                 {
                     //Accion de smith
                     m.smithAction2();
+                   
 
                 }
                 if (time % 5 == 0 && !m.end())
                  {
                     //Accion de neo
                     m.actionNeo();
+                   
 
-                 }
+                }
                     backgroundWorker1.ReportProgress(time);
                 System.Threading.Thread.Sleep(1000);
                 time += 1;

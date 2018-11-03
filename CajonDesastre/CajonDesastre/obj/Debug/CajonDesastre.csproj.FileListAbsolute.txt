@@ -7,3 +7,12 @@ c:\users\fj margotón\documents\visual studio 2015\Projects\CajonDesastre\CajonD
 c:\users\fj margotón\documents\visual studio 2015\Projects\CajonDesastre\CajonDesastre\obj\Debug\CajonDesastre.csproj.GenerateResource.Cache
 c:\users\fj margotón\documents\visual studio 2015\Projects\CajonDesastre\CajonDesastre\obj\Debug\CajonDesastre.exe
 c:\users\fj margotón\documents\visual studio 2015\Projects\CajonDesastre\CajonDesastre\obj\Debug\CajonDesastre.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\ProyectoMatrixFinal2018\CajonDesastre\CajonDesastre\bin\Debug\CajonDesastre.exe.config
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\ProyectoMatrixFinal2018\CajonDesastre\CajonDesastre\obj\Debug\CajonDesastre.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\ProyectoMatrixFinal2018\CajonDesastre\CajonDesastre\obj\Debug\CajonDesastre.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\ProyectoMatrixFinal2018\CajonDesastre\CajonDesastre\bin\Debug\CajonDesastre.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\ProyectoMatrixFinal2018\CajonDesastre\CajonDesastre\bin\Debug\CajonDesastre.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\ProyectoMatrixFinal2018\CajonDesastre\CajonDesastre\obj\Debug\CajonDesastre.csprojResolveAssemblyReference.cache
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\ProyectoMatrixFinal2018\CajonDesastre\CajonDesastre\obj\Debug\CajonDesastre.Form1.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\ProyectoMatrixFinal2018\CajonDesastre\CajonDesastre\obj\Debug\CajonDesastre.Properties.Resources.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\ProyectoMatrixFinal2018\CajonDesastre\CajonDesastre\obj\Debug\CajonDesastre.csproj.GenerateResource.Cache
