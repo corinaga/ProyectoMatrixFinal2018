@@ -20,6 +20,10 @@ namespace ProyectoMatrixFinal2018
             
             InitializeComponent();
             this.CenterToScreen();
+            String cancion = Directory.GetParent(Directory.GetParent(Application.StartupPath).ToString()).ToString() + "\\principal\\corazon.mp3";
+            
+
+            this.axWindowsMediaPlayer1.URL = cancion;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -31,6 +35,7 @@ namespace ProyectoMatrixFinal2018
 
         private void label1_Click_1(object sender, EventArgs e)
         {
+            this.axWindowsMediaPlayer1.close();
             this.pildoraRoja = new pildoraRoja();
             this.pildoraRoja.Show();
 
@@ -39,6 +44,7 @@ namespace ProyectoMatrixFinal2018
 
         private void label2_Click(object sender, EventArgs e)
         {
+            this.axWindowsMediaPlayer1.close();
             this.pildoraAzul = new pildoraAzul();
             this.pildoraAzul.Show();
             
@@ -49,9 +55,6 @@ namespace ProyectoMatrixFinal2018
 
         }
 
-        private void Final_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
+        
     }
 }

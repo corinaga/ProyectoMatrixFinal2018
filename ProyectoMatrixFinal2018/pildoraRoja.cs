@@ -25,10 +25,12 @@ namespace ProyectoMatrixFinal2018
             
         }
 
-
-
-
-
-        
+        private void axWindowsMediaPlayer1_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
+        {
+            if (e.newState == 8)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

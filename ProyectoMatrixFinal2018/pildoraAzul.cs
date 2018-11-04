@@ -27,5 +27,19 @@ namespace ProyectoMatrixFinal2018
         }
 
 
+
+        private void axWindowsMediaPlayer1_PlayStateChange_1(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
+        {
+            if (e.newState == 8)
+            {
+                Application.Exit();
+            }
+        }
     }
+
+
+    //Undefined 1 = Stopped(by User) 2 = Paused 3 = Playing 4 = Scan Forward 5 = Scan Backwards 6 = Buffering 7 = Waiting 8 = Media Ended 9 = Transitioning 10 = Ready 11 = Reconnecting 12 = Last
+
+
+
 }

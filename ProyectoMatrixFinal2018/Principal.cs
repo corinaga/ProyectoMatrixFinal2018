@@ -20,7 +20,7 @@ namespace ProyectoMatrixFinal2018
         private int infect;
         private Image dead;
         private Final final;
-        private bool da;
+        private bool control;
 
 
         public Principal()
@@ -37,7 +37,7 @@ namespace ProyectoMatrixFinal2018
             }
 
             da = false;
-            final = new Final();
+            
             InitializeComponent();
             this.CenterToScreen();
             Shown += new EventHandler(Principal_Shown);
@@ -122,12 +122,12 @@ namespace ProyectoMatrixFinal2018
             int cont = e.ProgressPercentage;
  
            
-            if (cont <5 &&!this.da)
+            if (cont <5 &&!this.control)
             {
                 this.txtArea.AppendText(this.whiteRabbit[cont]+String.Format(Environment.NewLine));
                 if (cont == 4)
                 {
-                    this.da = true;
+                    this.control = true;
                 }
 
             }
@@ -171,7 +171,7 @@ namespace ProyectoMatrixFinal2018
 
                 if (e.ProgressPercentage == 20)
                 {
-
+                    final = new Final();
                     final.Show();
                     Inicial ts = (Inicial)Application.OpenForms["Inicial"];
                     ts.Close();
