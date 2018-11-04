@@ -24,7 +24,7 @@ namespace ProyectoMatrixFinal2018
             this.CenterToScreen();
             String cancion = Directory.GetParent(Directory.GetParent(Application.StartupPath).ToString()).ToString() +"\\principal\\musica.mp3";
             
-            awp1.URL = cancion;
+            //awp1.URL = cancion;
 
 
         }
@@ -43,6 +43,11 @@ namespace ProyectoMatrixFinal2018
         private void Inicial_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Inicial_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

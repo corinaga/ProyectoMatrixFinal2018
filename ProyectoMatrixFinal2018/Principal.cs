@@ -164,7 +164,9 @@ namespace ProyectoMatrixFinal2018
                 }
 
 
+                
                 printDataView();
+                this.dataGridView1.ClearSelection();
                 // Aqui actualizamos el datagridview con los datos, osea el m.print que haciamos por consola
 
                 if (e.ProgressPercentage == 20)

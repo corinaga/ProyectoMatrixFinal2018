@@ -66,6 +66,18 @@
     <Compile Include="Matrix\Personage.cs" />
     <Compile Include="Matrix\Smith.cs" />
     <Compile Include="Matrix\Useful.cs" />
+    <Compile Include="pildoraAzul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pildoraAzul.Designer.cs">
+      <DependentUpon>pildoraAzul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pildoraRoja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pildoraRoja.Designer.cs">
+      <DependentUpon>pildoraRoja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +91,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicial.resx">
       <DependentUpon>Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pildoraAzul.resx">
+      <DependentUpon>pildoraAzul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pildoraRoja.resx">
+      <DependentUpon>pildoraRoja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -138,9 +156,12 @@
     <Content Include="imgPersonage\muerto.jpg" />
     <Content Include="imgPersonage\neo.png" />
     <Content Include="imgPersonage\smith.png" />
+    <Content Include="principal\corazon.mp3" />
     <Content Include="principal\fondo.gif" />
     <Content Include="principal\fondoFormulario.jpg" />
     <Content Include="principal\musica.mp3" />
+    <Content Include="principal\pildoraAzul.mp4" />
+    <Content Include="principal\pildoraRoja.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -82,6 +82,7 @@
             this.MinimizeBox = false;
             this.Name = "Inicial";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Inicial_FormClosing);
             this.Load += new System.EventHandler(this.Inicial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbFondo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.awp1)).EndInit();
