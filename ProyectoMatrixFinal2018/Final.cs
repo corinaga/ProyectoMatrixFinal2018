@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,12 @@ namespace ProyectoMatrixFinal2018
         {
             this.textBox1.Text = "hola";
         
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            
+            this.textBox1.Text = "adios";
         }
     }
 }

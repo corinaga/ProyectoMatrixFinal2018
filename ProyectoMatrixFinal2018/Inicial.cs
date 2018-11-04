@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,9 @@ namespace ProyectoMatrixFinal2018
             InitializeComponent();
             pbFondo.ImageLocation = "..\\..\\principal\\fondo.gif";
             this.CenterToScreen();
+            String cancion = Directory.GetParent(Directory.GetParent(Application.StartupPath).ToString()).ToString() +"\\principal\\musica.mp3";
+            
+            awp1.URL = cancion;
 
 
         }
@@ -33,7 +37,12 @@ namespace ProyectoMatrixFinal2018
         private void button1_Click(object sender, EventArgs e)
         {
             principal.Show();
-            this.Close();
+            this.Hide();
+        }
+
+        private void Inicial_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

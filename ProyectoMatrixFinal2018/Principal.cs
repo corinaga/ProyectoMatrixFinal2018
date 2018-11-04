@@ -106,8 +106,10 @@ namespace ProyectoMatrixFinal2018
 
            if (e.ProgressPercentage == 20)
             {
+                
                 final.Show();
-
+                Inicial ts = (Inicial)Application.OpenForms["Inicial"];
+                ts.Close();
             }
 
         }
