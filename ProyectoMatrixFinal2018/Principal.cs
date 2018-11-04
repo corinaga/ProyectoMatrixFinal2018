@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoMatrixFinal2018.Matrix;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,10 @@ namespace ProyectoMatrixFinal2018
     public partial class Principal : Form
     {
         private Matrix.Matrix m;
+        private String [] whiteRabbit;
+        private String [] neoDialogue;
+        private String[] smithDialogue;
+        private int infect;
         private Image dead;
         private Final final;
         private bool da;
@@ -20,6 +25,9 @@ namespace ProyectoMatrixFinal2018
 
         public Principal()
         {
+            whiteRabbit = new String[] { "> Wake up, Neo…", "> The Matrix has you....", "> Follow the white rabbit.", "> Knock, knock, Neo.","    " };
+            smithDialogue = new String[] { "Neo, be careful Smith is close to your position", "Neo, Smith is following you", "Run Neo, you're in danger", "Smith is acting" };
+            neoDialogue = new String[] { "Neo, we believe in you","you are the Choosen One", "you have healed people close to you" };
             try
             {
                 this.dead = (Image)new Bitmap(Image.FromFile("..\\..\\imgPersonage\\muerto.jpg"), 130, 130);
@@ -56,11 +64,11 @@ namespace ProyectoMatrixFinal2018
 
         void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            int cont = 1;
-            while (cont <=5)
+            int cont = 0;
+            while (cont <5)
             {
                 
-                System.Threading.Thread.Sleep(1000);
+                System.Threading.Thread.Sleep(2000);
                 backgroundWorker1.ReportProgress(cont);
                 cont++;
 
@@ -84,14 +92,15 @@ namespace ProyectoMatrixFinal2018
                 {
                     //Accion de smith
                     m.smithAction2();
-                   
+                    this.infect = m.getDead();
+
 
                 }
                 if (time % 5 == 0 && !m.end())
                  {
                     //Accion de neo
                     m.actionNeo();
-                   
+                    
 
                 }
                     backgroundWorker1.ReportProgress(time);
@@ -111,13 +120,12 @@ namespace ProyectoMatrixFinal2018
         {
             
             int cont = e.ProgressPercentage;
-            
-
+ 
            
-            if (cont <=5 &&!this.da)
+            if (cont <5 &&!this.da)
             {
-                this.txtArea.Text += "HOLA           ";
-                if (cont == 5)
+                this.txtArea.AppendText(this.whiteRabbit[cont]+String.Format(Environment.NewLine));
+                if (cont == 4)
                 {
                     this.da = true;
                 }
@@ -129,14 +137,28 @@ namespace ProyectoMatrixFinal2018
 
                 if (e.ProgressPercentage % 2 == 0)
                 {
-                    txtArea.Text += "Action Smith \n";
+                    txtArea.AppendText(String.Format(Environment.NewLine));
+                    txtArea.AppendText(this.smithDialogue[Useful.random_Number(0,this.smithDialogue.GetLength(0))] + String.Format(Environment.NewLine));
+                    if (this.infect > 0)
+                    {
+                        txtArea.AppendText("# Smith has killed " + this.infect + " people!!"+ String.Format(Environment.NewLine));
+                    }else
+                    {
+                        txtArea.AppendText("# Good news, smith hasn't killed anyone!!" + String.Format(Environment.NewLine));
+                    }
+                    
 
 
 
                 }
                 if (e.ProgressPercentage % 5 == 0)
                 {
-                    txtArea.Text += "Action Neo \n";
+                    txtArea.AppendText(String.Format(Environment.NewLine));
+                    if (m.getBelieved())
+                    {
+                        txtArea.AppendText(this.neoDialogue[Useful.random_Number(0, this.neoDialogue.GetLength(0))] + String.Format(Environment.NewLine));
+                    }
+                    
 
 
                 }

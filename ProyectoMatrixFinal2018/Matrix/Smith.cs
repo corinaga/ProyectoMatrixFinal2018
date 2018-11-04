@@ -32,6 +32,7 @@ namespace ProyectoMatrixFinal2018.Matrix
         {
             return Useful.random_Number(1, this.MAX);
         }
+      
 
     }
 }

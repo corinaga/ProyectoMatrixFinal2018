@@ -12,12 +12,15 @@ namespace ProyectoMatrixFinal2018.Matrix
         public Personage[,] board;
         private Smith smith;
         private Neo neo;
+        private int dead;
+        private bool believed;
 
 
         public Matrix()
         {
             neo = new Neo();
             smith = new Smith();
+            this.dead = 0;
 
             this.board = new Personage[5, 5];
             this.queue = new Queue<Personage>();
@@ -156,6 +159,7 @@ namespace ProyectoMatrixFinal2018.Matrix
             //Console.WriteLine();
 
             int infect = this.smith.getInfect();
+            this.dead = 0;
             Console.WriteLine("Infect: " + infect);
             Console.WriteLine();
 
@@ -166,7 +170,7 @@ namespace ProyectoMatrixFinal2018.Matrix
                 if (this.board[c.getx(), c.gety()] != null)
                 {
                     kill(c.getx(), c.gety());
-
+                    this.dead++;
                 }
                 else
                 {
@@ -241,8 +245,8 @@ namespace ProyectoMatrixFinal2018.Matrix
 
         public void actionNeo()
         {
-
-            if (this.neo.isBelieved() && (this.queue.Count() > 0))
+            this.believed = this.neo.isBelieved();
+            if (this.believed && (this.queue.Count() > 0))
             {
                 Console.WriteLine("Neo is believed to be the one ");
                 Cell n = whereIsNeo();
@@ -432,7 +436,28 @@ namespace ProyectoMatrixFinal2018.Matrix
         {
             return this.board;
         }
+
+        public Smith getSmith()
+        {
+            return this.smith;
+        }
+
+        public Neo getNeo()
+        {
+            return this.neo;
+        }
+
+        public int getDead()
+        {
+            return this.dead;
+        }
+
+        public bool getBelieved()
+        {
+            return this.believed;
+        }
     }
 
+   
     
 }

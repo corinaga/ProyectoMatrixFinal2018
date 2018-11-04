@@ -42,6 +42,10 @@ namespace ProyectoMatrixFinal2018.Matrix
             return this.believed;
         }
 
+        public bool getBelieved()
+        {
+            return this.believed;
+        }
 
 
     }
