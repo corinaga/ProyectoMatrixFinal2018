@@ -10,30 +10,25 @@ using System.Windows.Forms;
 
 namespace ProyectoMatrixFinal2018
 {
-    public partial class Inicial : Form
+    public partial class Final : Form
     {
-
-        private Principal principal;
-        public Inicial()
+        public Final()
         {
-            principal = new Principal();
-
             InitializeComponent();
-            pbFondo.ImageLocation = "..\\..\\principal\\fondo.gif";
             this.CenterToScreen();
-
-
         }
 
-        private void pbFondo_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
-            principal.Show();
-            this.Close();
+            this.textBox1.Text = "hola";
+        
         }
     }
 }

@@ -16,7 +16,9 @@ namespace ProyectoMatrixFinal2018
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inicial());
+            Inicial inicial = new Inicial();
+            inicial.Show();
+            Application.Run();
         }
     }
 }

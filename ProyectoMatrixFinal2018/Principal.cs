@@ -14,6 +14,9 @@ namespace ProyectoMatrixFinal2018
     {
         private Matrix.Matrix m;
         private Image dead;
+        private Final final;
+
+
         public Principal()
         {
             try
@@ -23,7 +26,10 @@ namespace ProyectoMatrixFinal2018
             {
                 Console.WriteLine("directorio de imagen no encontrado");
             }
+
+            final = new Final();
             InitializeComponent();
+            this.CenterToScreen();
             Shown += new EventHandler(Principal_Shown);
 
             // To report progress from the background worker we need to set this property
@@ -32,8 +38,9 @@ namespace ProyectoMatrixFinal2018
             backgroundWorker1.DoWork += new DoWorkEventHandler(backgroundWorker1_DoWork);
             // This event will be raised when we call ReportProgress
             backgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
+            
 
-        } 
+        }
 
         void Principal_Shown(object sender, EventArgs e)
         {
@@ -83,6 +90,9 @@ namespace ProyectoMatrixFinal2018
                 //nuevo.label1.Text = (progressBar1.Value.ToString() + "%");
 
             } while (time <= max_time && !m.end());
+            
+            
+
 
         }
         // Back on the 'UI' thread so we can update the progress bar
@@ -93,6 +103,12 @@ namespace ProyectoMatrixFinal2018
             txtArea.Text += e.ProgressPercentage + String.Format(Environment.NewLine);
             printDataView();
             // Aqui actualizamos el datagridview con los datos, osea el m.print que haciamos por consola
+
+           if (e.ProgressPercentage == 20)
+            {
+                final.Show();
+
+            }
 
         }
 
