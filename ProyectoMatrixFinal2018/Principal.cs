@@ -15,6 +15,7 @@ namespace ProyectoMatrixFinal2018
         private Matrix.Matrix m;
         private Image dead;
         private Final final;
+        private bool da;
 
 
         public Principal()
@@ -27,18 +28,19 @@ namespace ProyectoMatrixFinal2018
                 Console.WriteLine("directorio de imagen no encontrado");
             }
 
+            da = false;
             final = new Final();
             InitializeComponent();
             this.CenterToScreen();
             Shown += new EventHandler(Principal_Shown);
-
             // To report progress from the background worker we need to set this property
             backgroundWorker1.WorkerReportsProgress = true;
             // This event will be raised on the worker thread when the worker starts
             backgroundWorker1.DoWork += new DoWorkEventHandler(backgroundWorker1_DoWork);
             // This event will be raised when we call ReportProgress
             backgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
-            
+
+
 
         }
 
@@ -46,14 +48,23 @@ namespace ProyectoMatrixFinal2018
         {
             // Start the background worker
             backgroundWorker1.RunWorkerAsync();
-            
+
+
         }
         // On worker thread so do our thing!
 
 
         void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
+            int cont = 1;
+            while (cont <=5)
+            {
+                
+                System.Threading.Thread.Sleep(1000);
+                backgroundWorker1.ReportProgress(cont);
+                cont++;
 
+            }
             int max_time = 20;
             int time = 1;
 
@@ -87,7 +98,7 @@ namespace ProyectoMatrixFinal2018
                 System.Threading.Thread.Sleep(1000);
                 time += 1;
                 
-                //nuevo.label1.Text = (progressBar1.Value.ToString() + "%");
+               
 
             } while (time <= max_time && !m.end());
             
@@ -98,19 +109,51 @@ namespace ProyectoMatrixFinal2018
         // Back on the 'UI' thread so we can update the progress bar
         void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            // The progress percentage is a property of e
-            progressBar1.Value = e.ProgressPercentage;
-            txtArea.Text += e.ProgressPercentage + String.Format(Environment.NewLine);
-            printDataView();
-            // Aqui actualizamos el datagridview con los datos, osea el m.print que haciamos por consola
+            
+            int cont = e.ProgressPercentage;
+            
 
-           if (e.ProgressPercentage == 20)
+           
+            if (cont <=5 &&!this.da)
             {
-                
-                final.Show();
-                Inicial ts = (Inicial)Application.OpenForms["Inicial"];
-                ts.Close();
+                this.txtArea.Text += "HOLA           ";
+                if (cont == 5)
+                {
+                    this.da = true;
+                }
+
             }
+            else{
+                // The progress percentage is a property of e
+                 progressBar1.Value = e.ProgressPercentage;
+
+                if (e.ProgressPercentage % 2 == 0)
+                {
+                    txtArea.Text += "Action Smith \n";
+
+
+
+                }
+                if (e.ProgressPercentage % 5 == 0)
+                {
+                    txtArea.Text += "Action Neo \n";
+
+
+                }
+
+
+                printDataView();
+                // Aqui actualizamos el datagridview con los datos, osea el m.print que haciamos por consola
+
+                if (e.ProgressPercentage == 20)
+                {
+
+                    final.Show();
+                    Inicial ts = (Inicial)Application.OpenForms["Inicial"];
+                    ts.Close();
+                }
+            }
+            
 
         }
 
@@ -139,6 +182,6 @@ namespace ProyectoMatrixFinal2018
                 }
             }
         }
-        
+
     }
 }
