@@ -22,7 +22,7 @@ namespace ProyectoMatrixFinal2018
 
 
             this.axWindowsMediaPlayer1.URL = video;
-            //axWindowsMediaPlayer1.MediaEnded += media_MediaEnded;
+            
             
         }
 

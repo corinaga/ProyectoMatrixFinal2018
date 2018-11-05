@@ -104,7 +104,7 @@ namespace ProyectoMatrixFinal2018
 
                 }
                     backgroundWorker1.ReportProgress(time);
-                System.Threading.Thread.Sleep(1000);
+                System.Threading.Thread.Sleep(1500);
                 time += 1;
                 
                
@@ -191,6 +191,7 @@ namespace ProyectoMatrixFinal2018
             dataGridView1.Rows.Clear();
             for (int i = 0; i < m.getBoard().GetLength(0); i++)
             {
+                //  Añadir filas
                 dataGridView1.Rows.Add(new DataGridViewRow());
                 for (int j = 0; j < m.getBoard().GetLength(1); j++)
                 {
