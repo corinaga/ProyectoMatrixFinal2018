@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
+
+using System.Collections;
 
 namespace ProyectoMatrixFinal2018
 {
@@ -24,7 +27,8 @@ namespace ProyectoMatrixFinal2018
             
 
             this.axWindowsMediaPlayer1.URL = cancion;
-        }
+
+            }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -55,6 +59,9 @@ namespace ProyectoMatrixFinal2018
 
         }
 
-        
+        private void label3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

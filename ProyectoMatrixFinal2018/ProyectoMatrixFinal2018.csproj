@@ -158,6 +158,7 @@
     <Content Include="imgPersonage\smith.png" />
     <Content Include="principal\corazon.mp3" />
     <Content Include="principal\fondo.gif" />
+    <Content Include="principal\fondoFinal.jpg" />
     <Content Include="principal\fondoFormulario.jpg" />
     <Content Include="principal\musica.mp3" />
     <Content Include="principal\pildoraAzul.mp4" />

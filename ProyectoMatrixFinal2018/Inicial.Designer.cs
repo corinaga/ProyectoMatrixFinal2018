@@ -39,6 +39,7 @@
             // pbFondo
             // 
             this.pbFondo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbFondo.Cursor = System.Windows.Forms.Cursors.Default;
             this.pbFondo.Location = new System.Drawing.Point(-2, -3);
             this.pbFondo.Name = "pbFondo";
             this.pbFondo.Size = new System.Drawing.Size(690, 369);
@@ -77,6 +78,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.awp1);
             this.Controls.Add(this.pbFondo);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
