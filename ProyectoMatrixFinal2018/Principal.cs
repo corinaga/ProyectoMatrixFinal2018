@@ -30,13 +30,13 @@ namespace ProyectoMatrixFinal2018
             neoDialogue = new String[] { "Neo, we believe in you","you are the Choosen One", "you have healed people close to you" };
             try
             {
-                this.dead = (Image)new Bitmap(Image.FromFile("..\\..\\imgPersonage\\muerto.jpg"), 130, 130);
+                this.dead = (Image)new Bitmap(Image.FromFile("..\\..\\imgPersonage\\muerto.jpg"), 100, 100);
             }catch(Exception ex)
             {
                 Console.WriteLine("directorio de imagen no encontrado");
             }
 
-            da = false;
+            control = false;
             
             InitializeComponent();
             this.CenterToScreen();

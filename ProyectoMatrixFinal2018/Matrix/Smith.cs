@@ -22,8 +22,8 @@ namespace ProyectoMatrixFinal2018.Matrix
         }
         private Image imageResize()
         {
-            int height = 130;
-            int weight = 130;
+            int height = 100;
+            int weight = 100;
             Bitmap bm = new Bitmap(this.imgSmith, height, weight);
             return (Image)bm;
         }

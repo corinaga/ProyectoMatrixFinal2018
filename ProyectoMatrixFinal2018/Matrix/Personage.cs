@@ -43,8 +43,8 @@ namespace ProyectoMatrixFinal2018.Matrix
          * */
         private Image addImageResize(int num)
         {
-            int height = 130;
-            int weight = 130;
+            int height = 100;
+            int weight = 100;
             Image img = images[num];
             Bitmap bm = new Bitmap(img, height, weight);
             return (Image)bm;
